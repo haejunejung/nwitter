@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 
 const Router = ({ isLoggedIn, userObj, refreshUser }) => {
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       {isLoggedIn && <Navigation userObj={userObj} />}
       <Switch>
         {isLoggedIn ? (
